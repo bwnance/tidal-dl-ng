@@ -162,6 +162,8 @@ def _download(ctx: typer.Context, urls: list[str], try_login: bool = True) -> bo
                             file_template=file_template,
                             video_download=ctx.obj[CTX_TIDAL].settings.data.video_download,
                             download_delay=settings.data.download_delay,
+                            quality_audio=settings.data.quality_audio,
+                            quality_video=settings.data.quality_video,
                         )
         finally:
             # Clear and stop progress display
